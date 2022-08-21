@@ -1,10 +1,17 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
-canvas.width = 450;
-canvas.height = 450;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-ctx.save();
-ctx.arc(100, 100, 10, 0, Math.PI * 2);
-ctx.fillStyle = "white";
-ctx.fill();
-ctx.restore();
+
+var ball = new Ball();
+
+animation();
+
+
+function animation() {
+    requestAnimationFrame(animation);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    ball.draw();
+}
