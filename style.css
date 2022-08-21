@@ -1,0 +1,17 @@
+body {
+    user-select: none; /* Chrome, Edge, Opera and Firefox */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(7, 2, 23);
+}
+canvas {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
