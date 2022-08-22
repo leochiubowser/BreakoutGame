@@ -3,7 +3,7 @@ class Player {
         this.width = 130;
         this.height = 15;
         this.x = canvas.width / 2 - this.width / 2;
-        this.y = canvas.height - this.height;
+        this.y = canvas.height - this.height - 10;
         this.right = false;
         this.left = false;
         this.speed = 10;
@@ -28,6 +28,11 @@ class Player {
         addEventListener("keyup", () => {
             this.right = false;
             this.left = false;
+        })
+
+        canvas.addEventListener("click", (e) => {
+            this.x = e.offsetX
+
         })
 
     }
