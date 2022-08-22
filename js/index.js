@@ -1,6 +1,6 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
-canvas.width = 500;
+canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const ball = new Ball();
@@ -11,7 +11,7 @@ const enemy = new Enemy(100, 100);
 
 var enemyIfo = {
     count: 15,
-    interval: 100,
+    interval: 150,
 }
 var enemys = [];
 
@@ -49,7 +49,9 @@ function createEnemy(count) {
 
 function drawEnemy(count) {
     for (var i = 0; i < count; i++) {
-        enemys[i].draw();
+        if (enemys[i].alive){
+            enemys[i].draw();
+        }
     }
 }
 

@@ -30,15 +30,12 @@ class Player {
             this.left = false;
         })
 
-        canvas.addEventListener("click", (e) => {
-            this.x = e.offsetX
-
-        })
-
     }
 
     draw() {
-        this.move();
+        if (ball.alive) {
+            this.move();
+        }
         ctx.save();
         ctx.fillStyle = "#3B3D54";
         ctx.fillRect(this.x, this.y, this.width, this.height);

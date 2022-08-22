@@ -6,6 +6,7 @@ class Enemy {
         this.height = 10;
         this.colors = ["red", "yellow"];
         this.color = Math.round(Math.random() * 1);
+        this.alive = true;
     }
 
     draw() {
