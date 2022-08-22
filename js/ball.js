@@ -27,8 +27,6 @@ class Ball {
             this.x += this.velocity.x;
             this.y += this.velocity.y;
         }
-        console.log(allalive)
-
 
 
         if (this.x + this.radius >= canvas.width || this.x - this.radius <= 0) {
